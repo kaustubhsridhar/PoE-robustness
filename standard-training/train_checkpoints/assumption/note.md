@@ -1,0 +1,1 @@
+Download all *lipschitz.pth.tar files for different batch size, resnet20 and resnet50 models, for checking assumption here!

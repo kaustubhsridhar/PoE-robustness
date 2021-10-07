@@ -1,0 +1,62 @@
+initial accuracy: 85.97%
+apgd-ce - 1/18 - 150 out of 500 successfully perturbed
+apgd-ce - 2/18 - 127 out of 500 successfully perturbed
+apgd-ce - 3/18 - 128 out of 500 successfully perturbed
+apgd-ce - 4/18 - 136 out of 500 successfully perturbed
+apgd-ce - 5/18 - 146 out of 500 successfully perturbed
+apgd-ce - 6/18 - 129 out of 500 successfully perturbed
+apgd-ce - 7/18 - 139 out of 500 successfully perturbed
+apgd-ce - 8/18 - 126 out of 500 successfully perturbed
+apgd-ce - 9/18 - 136 out of 500 successfully perturbed
+apgd-ce - 10/18 - 122 out of 500 successfully perturbed
+apgd-ce - 11/18 - 143 out of 500 successfully perturbed
+apgd-ce - 12/18 - 144 out of 500 successfully perturbed
+apgd-ce - 13/18 - 142 out of 500 successfully perturbed
+apgd-ce - 14/18 - 134 out of 500 successfully perturbed
+apgd-ce - 15/18 - 152 out of 500 successfully perturbed
+apgd-ce - 16/18 - 130 out of 500 successfully perturbed
+apgd-ce - 17/18 - 137 out of 500 successfully perturbed
+apgd-ce - 18/18 - 26 out of 97 successfully perturbed
+robust accuracy after APGD-CE: 62.50% (total time 1474.7 s)
+apgd-t - 1/13 - 18 out of 500 successfully perturbed
+apgd-t - 2/13 - 16 out of 500 successfully perturbed
+apgd-t - 3/13 - 26 out of 500 successfully perturbed
+apgd-t - 4/13 - 18 out of 500 successfully perturbed
+apgd-t - 5/13 - 22 out of 500 successfully perturbed
+apgd-t - 6/13 - 18 out of 500 successfully perturbed
+apgd-t - 7/13 - 25 out of 500 successfully perturbed
+apgd-t - 8/13 - 25 out of 500 successfully perturbed
+apgd-t - 9/13 - 18 out of 500 successfully perturbed
+apgd-t - 10/13 - 19 out of 500 successfully perturbed
+apgd-t - 11/13 - 27 out of 500 successfully perturbed
+apgd-t - 12/13 - 19 out of 500 successfully perturbed
+apgd-t - 13/13 - 12 out of 250 successfully perturbed
+robust accuracy after APGD-T: 59.87% (total time 10836.4 s)
+fab-t - 1/12 - 0 out of 500 successfully perturbed
+fab-t - 2/12 - 0 out of 500 successfully perturbed
+fab-t - 3/12 - 0 out of 500 successfully perturbed
+fab-t - 4/12 - 0 out of 500 successfully perturbed
+fab-t - 5/12 - 0 out of 500 successfully perturbed
+fab-t - 6/12 - 0 out of 500 successfully perturbed
+fab-t - 7/12 - 0 out of 500 successfully perturbed
+fab-t - 8/12 - 0 out of 500 successfully perturbed
+fab-t - 9/12 - 0 out of 500 successfully perturbed
+fab-t - 10/12 - 0 out of 500 successfully perturbed
+fab-t - 11/12 - 0 out of 500 successfully perturbed
+fab-t - 12/12 - 0 out of 487 successfully perturbed
+robust accuracy after FAB-T: 59.87% (total time 23358.5 s)
+square - 1/12 - 0 out of 500 successfully perturbed
+square - 2/12 - 0 out of 500 successfully perturbed
+square - 3/12 - 0 out of 500 successfully perturbed
+square - 4/12 - 0 out of 500 successfully perturbed
+square - 5/12 - 0 out of 500 successfully perturbed
+square - 6/12 - 0 out of 500 successfully perturbed
+square - 7/12 - 0 out of 500 successfully perturbed
+square - 8/12 - 0 out of 500 successfully perturbed
+square - 9/12 - 0 out of 500 successfully perturbed
+square - 10/12 - 0 out of 500 successfully perturbed
+square - 11/12 - 0 out of 500 successfully perturbed
+square - 12/12 - 0 out of 487 successfully perturbed
+robust accuracy after SQUARE: 59.87% (total time 40716.2 s)
+max Linf perturbation: 0.03137, nan in tensor: 0, max: 1.00000, min: 0.00000
+robust accuracy: 59.87%

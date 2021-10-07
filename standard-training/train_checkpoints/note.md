@@ -1,0 +1,1 @@
+When training models from scratch, checkpoints will be saved here

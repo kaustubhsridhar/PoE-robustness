@@ -1,0 +1,1 @@
+All generated PGD images and logged adversarial accuracy (log.txt file) in this folder for each model
