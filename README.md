@@ -46,7 +46,7 @@ python eval_model.py --file checkpoints/5000_cifar10_resnet20_0.1.pth.tar --gpu-
 
 
 ## 2.2 adversarial-training
-### 2.2.1 First, download a model checkpoint from below into the corresponding folder PGD-AT/ (OR) TRADES/ (OR) RST/ (OR) Wide-RST
+### 2.2.1 First, download a model checkpoint from below into the corresponding folder PGD-AT/ (OR) TRADES/ (OR) RST
 https://drive.google.com/drive/folders/1vLtC62dTxFi1_uia8bx0chX5AK1ztOiK?usp=sharing
 (adversarial training checkpoints from three random seeds are stored here)
 
@@ -62,7 +62,6 @@ python autoattack_evaluation.py --model_path ${File Name} --log_file ${Approach}
 |    PGD-AT   | ResNet-50 |    0.1    |  0.1922  |  0.0961  | PGD-AT_${lr}.pt.latest |
 |    TRADES   | WRN-34-10 |    0.1    |  0.2668  |  0.1334  | TRADES_${lr}.pt        |
 |     RST     | WRN-28-10 |    0.1    |  0.1485  |  0.0743  | RST_${lr}.pt           |
-|   Wide-RST  | WRN-34-15 |    0.1    |  0.1485  |  0.0743  | Wide-RST_${lr}.pt      |
 
 #### Here is an example,
 ```
@@ -149,41 +148,20 @@ python robust_self_training.py --lr ${lr} --model_dir RST_${lr} --only-lipschitz
 python autoattack_evaluation.py --model_path RST_${lr}/checkpoint-epoch200.pt --log_file RST_${lr}/auto.log
 ```
 
-### 3.2.3 Wide-RST
-#### 3.2.3.1 First download the unlabelled data used in RST from below into Wide-RST/data/ folder
-[500K unlabeled data from TinyImages (with pseudo-labels)](https://drive.google.com/open?id=1LTw3Sb5QoiCCN-6Y5PEKkq9C9W60w-Hi)
-
-#### 3.2.3.2 Then run the following commands
-```
-cd adversarial-training/Wide-RST/
-python robust_self_training.py --lr ${lr} --aux_data_filename ti_500K_pseudo_labeled.pickle --model_dir Wide-RST_${lr}
-```
-* Run above command for three ${lr} as given in the table in section 2.2.2 of this README.
-* Running the above command will generate checkpoints every 25 epochs for 200 epochs. At the end, lipschitz constant will be estimated.
-* To only estimate Lispchitz constant (after training), run
-```
-python robust_self_training.py --lr ${lr} --model_dir RST_${lr} --only-lipschitz
-```
-* To evaluate on autoattack, run
-```
-python autoattack_evaluation.py --model_path Wide-RST_${lr}/checkpoint-epoch200.pt --log_file Wide-RST_${lr}/auto.log
-```
-
-
-### 3.2.4 PGD-AT
+### 3.2.3 PGD-AT
 ```
 cd adversarial-training/PGD-AT/
 ```
-#### 3.2.4.0 Install apex from NVIDIA by following Quick Start instructions at below link
+#### 3.2.3.0 Install apex from NVIDIA by following Quick Start instructions at below link
 https://github.com/NVIDIA/apex
-#### 3.2.4.1 SOTA PGD-AT, Lipschitz estimation
+#### 3.2.3.1 SOTA PGD-AT, Lipschitz estimation
 ```
 python robust_train.py --lr 0.1 --dataset cifar --data ./data --arch resnet50 --batch-size 256 --out-dir PGD-AT --exp-name SOTA_0.1 \
     --adv-train 1 --eps 8.0/255 --constraint inf --attack-steps 10 --attack-lr 0.007 --random-restarts 5
 ```
 * Running the above command will generate a 'latest' checkpoint after 150 epochs. At the end, lipschitz constant will be estimated.
 
-#### 3.2.4.2 Largest Convergent and Persistent PGD-AT
+#### 3.2.3.2 Largest Convergent and Persistent PGD-AT
 ```
 python robust_train_fast.py --lr ${lr} --dataset cifar --data ./data --arch resnet50 --batch-size 256 --out-dir PGD-AT --exp-name PE_${lr} \
     --adv-train 1 --eps 8.0/255 --constraint inf --attack-steps 10 --attack-lr 0.007 --random-restarts 5
@@ -195,7 +173,7 @@ python robust_train_fast.py --lr ${lr} --dataset cifar --data ./data --arch resn
 python autoattack_evaluation.py --model_path PGD-AT/PE_${lr}/checkpoint.pt.latest --log_file PGD-AT/PE_${lr}/auto.log
 ```
 
-### 3.2.5 Notes
+### 3.2.4 Notes
 * In all 4 cases above, the Ms and Ns used in estimation can be changed within more_utils/lipschitz.py > class Weibull_Fitter() > function fit()
 
 
