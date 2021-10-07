@@ -48,7 +48,7 @@ python eval_model.py --file checkpoints/5000_cifar10_resnet20_0.1.pth.tar --gpu-
 ## 2.2 adversarial-training
 ### 2.2.1 First, download a model checkpoint from below into the corresponding folder PGD-AT/ (OR) TRADES/ (OR) RST/ (OR) Wide-RST
 https://drive.google.com/drive/folders/1vLtC62dTxFi1_uia8bx0chX5AK1ztOiK?usp=sharing
-(adversarial training checkpoints from a random seed are stored here)
+(adversarial training checkpoints from three random seeds are stored here)
 
 ### 2.2.2 Then run the corresponding command below:
 ```
