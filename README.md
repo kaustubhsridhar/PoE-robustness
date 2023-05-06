@@ -1,4 +1,6 @@
 # 1. Setup
+This repository contains the code for the paper available at https://arxiv.org/abs/2106.02078
+
 ## 1.1 Anaconda virtual environment
 
 Create a conda environment named DL_env with all dependencies by running below
